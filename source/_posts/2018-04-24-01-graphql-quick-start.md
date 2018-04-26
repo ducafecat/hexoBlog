@@ -4,7 +4,7 @@ top: false
 date: 2018-04-24 11:36:48
 tags: graphql
 categories: GraphQL 渐进学习
-thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png
+thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png?imageView2/2/w/800
 ---
 
 # 01-GraphQL-快速上手
@@ -25,6 +25,8 @@ mkdir graphql-example
 cd graphql-example
 npm init
 ```
+
+> 开发环境可以参考 [nodejs 支持 es6 & 修改源码自动重启](/2018/04/26/nodejs-es6-nodemon/)
 
 ## 安装依赖包
 
