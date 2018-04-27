@@ -1,5 +1,5 @@
 ---
-title: 02-GraphQL-组件构成知识整理-queries-schema-validation-execution-introspection
+title: GraphQL 渐进学习 02-GraphQL-组件构成知识整理
 top: false
 date: 2018-04-25 10:25:14
 tags: graphql
@@ -7,7 +7,7 @@ categories: GraphQL 渐进学习
 thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png?imageView2/2/w/800
 ---
 
-# 02-GraphQL-组件构成知识整理
+# GraphQL 渐进学习 02-GraphQL-组件构成知识整理
 
 ## 目标
 

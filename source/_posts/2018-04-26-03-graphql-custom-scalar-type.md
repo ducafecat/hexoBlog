@@ -1,5 +1,5 @@
 ---
-title: 03-GraphQL-scalar-自定义类型
+title: GraphQL 渐进学习 03-GraphQL-scalar-自定义类型
 top: false
 date: 2018-04-26 11:54:56
 tags: graphql
@@ -7,7 +7,7 @@ categories: GraphQL 渐进学习
 thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png?imageView2/2/w/800
 ---
 
-# 03-GraphQL-scalar-自定义类型
+# GraphQL 渐进学习 03-GraphQL-scalar-自定义类型
 
 ## 目标
 

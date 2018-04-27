@@ -3,33 +3,38 @@ title: nodejs 支持 es6 & 修改源码自动重启
 top: false
 date: 2018-04-26 09:32:17
 tags: es6 nodemon
-categories:
+categories: node
 thumbnail:
 ---
 
 # nodejs 支持 es6 & 修改源码自动重启
 
-## 安装 `babel es6` 依赖包
-
-```bash
-npm i --save-dev babel-cli babel-plugin-transform-async-generator-functions babel-plugin-transform-object-rest-spread babel-plugin-transform-runtime babel-preset-latest
-```
-
-## 修改源码自动重启 依赖包
+## 1. 安装 `babel es6` 依赖包
 
 ```bash
 npm i --save-dev nodemon
+npm i --save-dev babel-cli
+npm i --save-dev babel-plugin-transform-async-generator-functions
+npm i --save-dev babel-plugin-transform-object-rest-spread
+npm i --save-dev babel-plugin-transform-runtime
+npm i --save-dev babel-preset-latest
 ```
 
-## 编写 `npm` `scripts`
+## 2. 编写 `.babelrc`
+
+```bash
+{
+  "presets": ["latest"]
+}
+```
+
+## 3. 编写 `npm` `scripts`
 
 ```json
   "scripts": {
-    "start": "nodemon ./src/server.js --exec babel-node -e js"
+    "start": "nodemon ./src/your-es6-code.js --exec babel-node -e js"
   },
 ```
-
-`./src/server.js` 是你的 es6 代码
 
 ## 执行
 
@@ -44,9 +49,9 @@ npm start
   "name": "nodejs es6 run",
   "version": "0.1.0",
   "description": "",
-  "main": "./src/server.js",
+  "main": "./src/your-es6-code.js",
   "scripts": {
-    "start": "nodemon ./src/server.js --exec babel-node -e js",
+    "start": "nodemon ./src/your-es6-code.js --exec babel-node -e js",
     "h" : "nodemon -h"
   },
   "author": "",

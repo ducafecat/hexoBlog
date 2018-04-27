@@ -1,5 +1,5 @@
 ---
-title: 05-graphql-resolvers-union-联合的使用
+title: GraphQL 渐进学习 05-graphql-resolvers-union-联合的使用
 top: false
 date: 2018-04-26 14:21:53
 tags: graphql
@@ -7,7 +7,7 @@ categories: GraphQL 渐进学习
 thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png?imageView2/2/w/800
 ---
 
-# 05-graphql-resolvers-union-联合的使用
+# GraphQL 渐进学习 05-graphql-resolvers-union-联合的使用
 
 ## 目标
 
