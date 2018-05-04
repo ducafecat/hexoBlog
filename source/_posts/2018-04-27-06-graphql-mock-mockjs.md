@@ -2,7 +2,7 @@
 title: GraphQL 渐进学习 06-graphql-采用-mockjs-mock数据
 top: false
 date: 2018-04-27 14:53:13
-tags:
+tags: graphql
 categories: GraphQL 渐进学习
 thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png?imageView2/2/w/800
 ---
