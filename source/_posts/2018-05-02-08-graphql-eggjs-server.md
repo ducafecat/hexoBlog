@@ -2,7 +2,7 @@
 title: GraphQL 渐进学习 08-graphql-采用eggjs-服务端开发
 top: false
 date: 2018-05-02 17:13:41
-tags: graphql
+tags: graphql eggjs
 categories: GraphQL 渐进学习
 thumbnail: http://oflimcy5e.bkt.clouddn.com/graphql-quick-start-thumbnail.png?imageView2/2/w/800
 ---
