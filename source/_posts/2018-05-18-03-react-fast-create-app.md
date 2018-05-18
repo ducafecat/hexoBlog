@@ -166,6 +166,8 @@ https://codepen.io/ducafecat/pen/WJzvRx
 
 ## 项目编译
 
+* 允许
+
 ```bash
 cd reactjs-example
 npm run build
@@ -176,6 +178,49 @@ npm run build
 录像
 
 ![create-react-app-build](http://oflimcy5e.bkt.clouddn.com/react-fast-03-create-react-app-build.gif)
+
+* 如果本地打开 `build/index.html` ，你会发现找不到资源文件，因为默认是指向 `/` 修改本地允许
+
+先打开模板看下
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ...
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+```
+
+这个 `%PUBLIC_URL%` 是全局变量
+
+我们编译命令要这样写
+
+```bash
+- Windows
+set PUBLIC_URL=./ && npm run build
+
+- macOS
+PUBLIC_URL=./ npm run build
+```
+
+再次打开 `build/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  ...
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <title>React App</title>
+  <link href="./static/css/main.65027555.css" rel="stylesheet">
+</head>
+```
+
+替换完成！
 
 ## 本文代码
 
