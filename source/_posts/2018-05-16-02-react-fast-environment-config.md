@@ -4,7 +4,7 @@ top: false
 date: 2018-05-16 15:37:06
 tags: react
 categories: React 快速上手
-thumbnail: http://oflimcy5e.bkt.clouddn.com/reactjs-logo.jpeg
+thumbnail: http://oflimcy5e.bkt.clouddn.com/reactjs-logo-2.jpeg
 ---
 
 # React 快速上手 - 02 开发环境搭建
@@ -100,7 +100,7 @@ brew install yarn
 
 ## 安装 nrm
 
-nrm -- NPM registry manager
+![nrm -- NPM registry manager](http://oflimcy5e.bkt.clouddn.com/react-fast-02-nrm.png)
 
 包源管理工具
 
@@ -138,7 +138,7 @@ edunpm - http://registry.enpmjs.org/
 
 ## 安装 n
 
-n – Interactively Manage Your Node.js Versions
+![n – Interactively Manage Your Node.js Versions](http://oflimcy5e.bkt.clouddn.com/react-fast-02-n.png)
 
 node 版本切换工具
 
@@ -195,18 +195,145 @@ cnpm install -g n
 
 ![vscode](http://oflimcy5e.bkt.clouddn.com/react-fast-02-vscode.png)
 
-推荐理由 微软出品、免费、开源、速度快、轻量级、程序稳定、不卡、不卡、大文件秒开、语法高亮、配置方便
+推荐理由 微软出品、免费、开源、速度快、轻量级、程序稳定、不卡、不卡、大文件秒开、语法高亮、升级频繁、配置方便
 
 下载后是一个安装包，一路 `下一步` 安装直到完成
 
+## 配置 vscode 格式文件 `.editorconfig`
+
+```js
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+tab_width = 1
+```
+
+没有请创建文件
+
 ## 安装 vscode 插件 eslint
+
+* 全局安装
+
+```bash
+cnpm install -g eslint
+```
+
+* 我们后面用 `脚手架` 创建项目，默认生成有 `.eslintrc.js` 配置文件
+
+* 安装 vscode 插件, `侧栏 > 扩展 > 搜索 eslint`
+
+![eslint](http://oflimcy5e.bkt.clouddn.com/react-fast-02-eslint.png)
+
+* 配置 `vscode` , 打开菜单 `文件 > 首选项 > 设置`
+
+```js
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": "off",
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    "javascriptreact",
+    "html",
+    "vue"
+  ],
+  "eslint.options": { "plugins": ["html"] },
+```
 
 ## 安装 vscode 插件 prettier - Code formatter
 
+代码格式化插件
+
+* 安装 vscode 插件, `侧栏 > 扩展 > 搜索 prettier`
+
+![prettier](http://oflimcy5e.bkt.clouddn.com/react-fast-02-prettier.png)
+
+* 配置 `vscode` , 打开菜单 `文件 > 首选项 > 设置`
+
+```js
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.bracketSpacing": false,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+```
+
+* 使用，鼠标右键点击 `格式化文件`
+
+![prettier-format-file](http://oflimcy5e.bkt.clouddn.com/react-fast-02-prettier-format.gif)
+
 ## 安装 vscode 插件 reactjs code snippets
+
+代码片段工具
+
+* 安装 vscode 插件, `侧栏 > 扩展 > 搜索 reactjs code snippets`
+
+![reactjs code snippets](http://oflimcy5e.bkt.clouddn.com/react-fast-02-reactjs-snippets.png)
+
+* 使用，新建文件 `MyApp.js`
+
+![reactjs-snippets-rcc](http://oflimcy5e.bkt.clouddn.com/react-fast-02-reactjs-snippets-rcc.gif)
 
 ## 安装 vscode 插件 Auto Close Tag
 
+html 标签自动补完插件
+
+* 安装 vscode 插件, `侧栏 > 扩展 > 搜索 Auto Close Tag`
+
 ## 安装 vscode 插件 Auto Rename Tag
 
+html 标签改名自动同步插件
+
+* 安装 vscode 插件, `侧栏 > 扩展 > 搜索 Auto Rename Tag`
+
 ## 安装 vscode 插件 Debugger for Chrome
+
+vscode chrome 调试工具
+
+* 安装 vscode 插件, `侧栏 > 扩展 > 搜索 Debugger for Chrome`
+
+![Debugger for Chrome](http://oflimcy5e.bkt.clouddn.com/react-fast-02-debugger.png)
+
+* 调试配置文件 `launch.json`
+
+```js
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/src",
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    }
+  ]
+}
+```
+
+* 使用录像
+
+![use-debugger-for-chrome](http://oflimcy5e.bkt.clouddn.com/react-fast-02-debugger-for-chrome.gif)
+
+> `http://localhost:3000` 服务需要已开启
+>
+> 安装完插件都需要重启 `vscode` 才能生效
