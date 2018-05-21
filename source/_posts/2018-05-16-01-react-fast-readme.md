@@ -36,7 +36,7 @@ thumbnail: http://oflimcy5e.bkt.clouddn.com/reactjs-logo-2.jpeg
 * 01 前言
 * 02 开发环境搭建
 * 03 脚手架创建项目 一切都是组件
-* 04 基础特性 JSX、Props、State、Lifecycle、Event
+* 04 基础特性 JSX、Props、State、Lifecycle、Event、Style
 * 05 组件渲染控制
 * 06 容器组件、展示组件
 * 07 前端路由 react-router
