@@ -58,6 +58,9 @@ codepen
 
 https://codepen.io/ducafecat/pen/MGBzMQ
 
+<p data-height="265" data-theme-id="0" data-slug-hash="MGBzMQ" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.1 渲染Render 并列" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/MGBzMQ/">React快速上手 3.1 渲染Render 并列</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ### 2. 条件判断
 
 代码
@@ -102,6 +105,9 @@ codepen
 
 https://codepen.io/ducafecat/pen/rvrQXK
 
+<p data-height="265" data-theme-id="0" data-slug-hash="rvrQXK" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.2 渲染Render 条件判断" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/rvrQXK/">React快速上手 3.2 渲染Render 条件判断</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ### 3. 三目运算
 
 代码
@@ -139,6 +145,9 @@ function RenderView() {
 codepen
 
 https://codepen.io/ducafecat/pen/WJKLej
+
+<p data-height="265" data-theme-id="0" data-slug-hash="WJKLej" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.3 渲染Render 三目运算" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/WJKLej/">React快速上手 3.3 渲染Render 三目运算</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### 4. 循环
 
@@ -194,6 +203,9 @@ function RenderView() {
 codepen
 
 https://codepen.io/ducafecat/pen/aGjPoQ
+
+<p data-height="265" data-theme-id="0" data-slug-hash="aGjPoQ" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.4 渲染Render 循环" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/aGjPoQ/">React快速上手 3.4 渲染Render 循环</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### 5. 嵌套循环
 
@@ -256,6 +268,9 @@ function RenderView() {
 codepen
 
 https://codepen.io/ducafecat/pen/OZqWZO
+
+<p data-height="265" data-theme-id="0" data-slug-hash="OZqWZO" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.7 渲染Render 嵌套循环" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/OZqWZO/">React快速上手 3.7 渲染Render 嵌套循环</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 **虽然上面代码能运行，一旦代码复杂了，是不适合阅读和维护的，我们需要把 `datas` 的循环封装成组件，代码如下**
 
@@ -329,6 +344,9 @@ codepen
 
 https://codepen.io/ducafecat/pen/pVZqvp
 
+<p data-height="265" data-theme-id="0" data-slug-hash="pVZqvp" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.5 渲染Render 空组件" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/pVZqvp/">React快速上手 3.5 渲染Render 空组件</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ### 7. ref引用
 
 代码
@@ -368,6 +386,9 @@ function RenderView() {
 codepen
 
 https://codepen.io/ducafecat/pen/OZwrVR
+
+<p data-height="265" data-theme-id="0" data-slug-hash="OZwrVR" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.6 渲染Render ref引用" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/OZwrVR/">React快速上手 3.6 渲染Render ref引用</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### 8. `React.createElement` 方式
 
@@ -410,6 +431,9 @@ function RenderView() {
 codepen
 
 https://codepen.io/ducafecat/pen/QropBL
+
+<p data-height="265" data-theme-id="0" data-slug-hash="QropBL" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 3.8 渲染Render React.createElement" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/QropBL/">React快速上手 3.8 渲染Render React.createElement</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## 代码
 
