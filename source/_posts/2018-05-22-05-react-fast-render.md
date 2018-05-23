@@ -2,6 +2,7 @@
 title: React 快速上手 - 05 组件渲染控制
 top: false
 date: 2018-05-22 08:52:55
+tags: react
 categories: React 快速上手
 thumbnail: http://oflimcy5e.bkt.clouddn.com/reactjs-logo-2.jpeg
 ---
