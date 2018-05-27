@@ -329,3 +329,9 @@ const schema = makeExecutableSchema({
 * [graphql-tools/generate-schema](https://www.apollographql.com/docs/graphql-tools/generate-schema.html)
 
 * [require-graphql-file](https://github.com/ducafecat/require-graphql-file)
+
+---
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

@@ -457,3 +457,9 @@ module.exports = options => {
 * [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
 * [ApolloLink Set headers](https://github.com/Akryum/vue-apollo/issues/144)
 * [element-ui](https://github.com/ElemeFE/element)
+
+---
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

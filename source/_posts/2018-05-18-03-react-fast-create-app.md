@@ -231,3 +231,9 @@ PUBLIC_URL=./ npm run build
 * [Create React App](https://reactjs.org/docs/add-react-to-a-new-app.html)
 * [Git create-react-app](https://github.com/facebook/create-react-app)
 * [react-scripts](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

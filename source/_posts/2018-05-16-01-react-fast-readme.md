@@ -43,3 +43,9 @@ thumbnail: http://oflimcy5e.bkt.clouddn.com/reactjs-logo-2.jpeg
 * 08 状态管理 react-redux
 * 09 数据请求 fetch
 * 10 属性类型检查 prop-types
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

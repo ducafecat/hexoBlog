@@ -648,3 +648,9 @@ https://codepen.io/ducafecat/pen/rvroYP
 * [react-router](https://reacttraining.com/react-router/)
 * [react-transition-group](http://reactcommunity.org/react-transition-group/)
 * [code-splitting-in-create-react-app](https://serverless-stack.com/chapters/code-splitting-in-create-react-app.html)
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

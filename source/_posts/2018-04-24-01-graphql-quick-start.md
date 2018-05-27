@@ -140,3 +140,9 @@ node quick-start.js
 ## 参考
 
 * [Quick start](https://www.apollographql.com/docs/apollo-server/example.html)
+
+---
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

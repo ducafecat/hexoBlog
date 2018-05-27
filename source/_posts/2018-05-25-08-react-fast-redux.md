@@ -394,3 +394,9 @@ https://codepen.io/ducafecat/pen/RyBEeK
 * [Example: Todo List](https://redux.js.org/basics/example-todo-list)
 * [Redux DevTools extension](http://extension.remotedev.io/)
 * [zalmoxisus/redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

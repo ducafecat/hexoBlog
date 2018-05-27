@@ -447,3 +447,9 @@ https://codepen.io/ducafecat/pen/QropBL
 * [JSX In Depth](https://reactjs.org/docs/jsx-in-depth.html)
 * [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)
 * [React Without JSX](https://reactjs.org/docs/react-without-jsx.html)
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

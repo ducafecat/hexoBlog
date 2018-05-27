@@ -426,3 +426,9 @@ https://codepen.io/ducafecat/pen/GdBPZZ
 
 * [Lifting State Up](https://reactjs.org/docs/lifting-state-up.html)
 * [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)

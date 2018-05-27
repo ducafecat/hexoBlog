@@ -337,3 +337,9 @@ vscode chrome 调试工具
 > `http://localhost:3000` 服务需要已开启
 >
 > 安装完插件都需要重启 `vscode` 才能生效
+
+----
+
+© 会煮咖啡的猫咪
+微信 ducafecat
+[镜像](ducafecat.github.io) [Git](https://github.com/ducafecat)
