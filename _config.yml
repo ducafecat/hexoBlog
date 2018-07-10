@@ -79,7 +79,7 @@ theme: material
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ducafecat/ducafecat.github.io.git
+  repo: https://ducafecat@github.com/ducafecat/ducafecat.github.io.git
   branch: master
   message: "posts update"
   name: ducafecat

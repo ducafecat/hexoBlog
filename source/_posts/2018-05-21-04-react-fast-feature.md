@@ -320,17 +320,16 @@ Unmount    | 已移出真实 DOM
 
 #### 4.2 组件周期函数
 
-![react-lifecycle](http://oflimcy5e.bkt.clouddn.com/react-fast-04-lifecycle.jpeg)
+![react-lifecycle](http://oflimcy5e.bkt.clouddn.com/ducafecat_2018-05-29-14-47-39.png)
 
 状态|说明
 --------|-------------
-componentWillMount          | 在渲染前调用,在客户端也在服务端。
 componentDidMount           | 在第一次渲染后调用，只在客户端。
-componentWillReceiveProps   | 在组件接收到一个新的 prop (更新后)时被调用。这个方法在初始化render时不会被调用。
 shouldComponentUpdate       | 返回一个布尔值。在组件接收到新的props或者state时被调用。
-componentWillUpdate         | 在组件接收到新的props或者state但还没有render时被调用。在初始化时不会被调用。
 componentDidUpdate          | 在组件完成更新后立即调用。在初始化时不会被调用。
 componentWillUnmount        | 在组件从 DOM 中移除的时候立刻被调用。
+getDerivedStateFromProps    | 组件实例化后和接受新属性时将会调用 **新增**
+getSnapshotBeforeUpdate     | 在最新的渲染输出提交给DOM前将会立即调用 **新增**
 
 #### 4.3 示例打印周期过程
 
@@ -343,20 +342,11 @@ class ElementLifecycle extends Component {
     this.date = props.date
     this.state = {date: this.date}
   }
-  componentWillMount() {
-    console.log('componentWillMount 在渲染前调用')
-  }
   componentDidMount() {
     console.log('componentDidMount 在第一次渲染后调用')
     if (this.date !== undefined) {
       this.setState({date: this.date})
     }
-  }
-  componentWillReceiveProps(nextProps) {
-    console.log(
-      'componentWillReceiveProps 在组件接收到一个新的 prop (更新后)时被调用',
-      nextProps
-    )
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log(
@@ -365,13 +355,6 @@ class ElementLifecycle extends Component {
       nextState
     )
     return true // 返回一个布尔值，大家可以试着在这里返回 false
-  }
-  componentWillUpdate(nextProps, nextState) {
-    console.log(
-      'componentWillUpdate 在组件接收到新的props或者state但还没有render时被调用',
-      nextProps,
-      nextState
-    )
   }
   componentDidUpdate(prevProps, prevState) {
     console.log(
@@ -391,7 +374,7 @@ class ElementLifecycle extends Component {
 
 打印截图
 
-![react-lifecycle](http://oflimcy5e.bkt.clouddn.com/react-fast-04-lifecycle-console.png)
+![react-lifecycle-console](http://oflimcy5e.bkt.clouddn.com/ducafecat_2018-05-29-14-52-56.png)
 
 **codepen**
 
@@ -399,6 +382,122 @@ https://codepen.io/ducafecat/pen/aGjQMR
 
 <p data-height="265" data-theme-id="0" data-slug-hash="aGjQMR" data-default-tab="js,result" data-user="ducafecat" data-embed-version="2" data-pen-title="React快速上手 2.4 基础特性 生命周期 Lifecycle" class="codepen">See the Pen <a href="https://codepen.io/ducafecat/pen/aGjQMR/">React快速上手 2.4 基础特性 生命周期 Lifecycle</a> by 会煮咖啡的猫 (<a href="https://codepen.io/ducafecat">@ducafecat</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+#### 4.4 `react 16.x` 新版本变动
+
+##### 4.4.1 计划取消 3 个生命周期函数
+
+分别是 `componentWillMount`, `componentWillReceiveProps`, `componentWillUpdate`
+
+理由是在新的升级中，存在漏洞（在Facebook上，他们维护了超过50,000个React组件。 ）
+
+> 注意：
+> 弃用警告将在未来的16.x版本中启用，但旧版生命周期将继续运行至17.x版。
+> 即使在17.x版中，仍然可以使用它们，但它们会以『UNSAFE_』为前缀被重命名，以表明它们可能会引起问题。我们还准备了一个自动化的脚本来在现有代码中对它们重新命名。
+> `UNSAFE_componentWillMount()` `UNSAFE_componentWillReceiveProps()` `UNSAFE_componentWillUpdate()`
+
+##### 4.4.2 新增 `getDerivedStateFromProps`
+
+> 组件实例化后和接受新属性时将会调用
+
+代码
+
+```js
+// 组件
+class ElementLifecycleNew extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log(
+      'getDerivedStateFromProps 组件实例化后和接受新属性时将会调用',
+      nextProps,
+      prevState
+    )
+    // return null // 无需改变 返回 null
+    return {
+      date: new Date('2011-11-11 11:11:11')
+    }
+  }
+  render() {
+    return <p>{this.state.date.toLocaleString()}</p>
+  }
+}
+
+// 调用
+<ElementLifecycleNew date={new Date('2009-09-09 09:09:09')} />
+```
+
+如果你不想改变状态 `state` , 返回 `null`
+
+##### 4.4.3 新增 `getSnapshotBeforeUpdate + componentDidUpdate`
+
+> `getSnapshotBeforeUpdate()` 在最新的渲染输出提交给DOM前将会立即调用。它让你的组件能在当前的值可能要改变前获得它们。这一生命周期返回的任何值将会 作为参数被传递给 `componentDidUpdate()`。
+
+```js
+// 代码
+class ElementLifecycleNew2 extends Component {
+  listRef = React.createRef()
+  constructor(props) {
+    super(props)
+    this.state = {
+      date: props.date
+    }
+  }
+  componentDidMount() {
+    console.log('componentDidMount')
+    this.setState({date: new Date('2011-11-22 22:22:22')})
+  }
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('getSnapshotBeforeUpdate', prevProps, prevState, this.state)
+    return {
+      offset: 80
+    }
+  }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log('componentDidUpdate', snapshot)
+    this.listRef.current.style.top = `${snapshot.offset}px`
+  }
+  render() {
+    return (
+      <div
+        style={{
+          height: 200,
+          width: 150,
+          backgroundColor: 'blue',
+          position: 'relative',
+          color: '#fff'
+        }}
+      >
+        <p>{this.state.date.toLocaleString()}</p>
+        <div
+          ref={this.listRef}
+          style={{
+            height: 20,
+            width: 150,
+            backgroundColor: 'red',
+            top: 0,
+            position: 'absolute'
+          }}
+        />
+      </div>
+    )
+  }
+}
+
+// 调用
+```
+
+这个例子的流程是:
+
+```js
+1. `componentDidMount` 中修改了 state 触发 `getSnapshotBeforeUpdate`
+2. `getSnapshotBeforeUpdate` 获取修改前的 属性、状态，已修改的 状态，然后一个修改值 `offset`
+3. `componentDidUpdate` 中的 `snapshot` 获取修改值 ，直接 `ref` `dom` 修改 `style`
+```
+
+> 简单说就是不修改 state 更新机制，来维护 `dom`，比如改改 宽 高 位置
 
 ### 5. 事件 Event
 
@@ -575,6 +674,7 @@ styles.fill = {
 * [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 * [Handling Events](https://reactjs.org/docs/handling-events.html)
 * [lists-and-keys.html](https://reactjs.org/docs/lists-and-keys.html)
+* [React.Component](https://reactjs.org/docs/react-component.html)
 
 ----
 
