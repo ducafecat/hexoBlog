@@ -9,6 +9,34 @@ thumbnail:
 
 # Docker 01-常用指令
 
+## 安装 Docker Centos7
+
+### 阿里镜像安装
+
+```bash
+# step 1: 安装必要的一些系统工具
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+# Step 2: 添加软件源信息
+sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+# Step 3: 更新并安装 Docker-CE
+sudo yum makecache fast
+sudo yum -y install docker-ce
+# Step 4: 开启Docker服务
+sudo service docker start
+```
+
+### 加速
+
+```sh
+sudo mkdir -p /etc/docker
+sudo vi /etc/docker/daemon.json
+{
+  "registry-mirrors": ["https://8stycbeq.mirror.aliyuncs.com"]
+}
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 ## 命令
 
 ### 拉取镜像
@@ -224,6 +252,36 @@ docker run -ti --name volume1 -v ~/Documents/labs:/myDir centos:6.9 bash
 ```bash
 docker run -ti  -d -v /dataVolume --name v0 centos:6.9
 docker run -ti --volumes-from v0 --name v1 centos:6.9 bash
+```
+
+### 备份volume
+
+```bash
+1. 建立容器
+docker run -it --name vol_simple -v /data ubuntu /bin/bash
+
+2. 备份
+docker run  --rm --vloumes-from vol_simple -v$(pwd):/backup ubuntu tar cvf /backup/data.tar /data
+```
+
+这个指令启动了一个临时的容器，这个容器挂载了两个volume，第一个volume与要备份的volume共享，第二个volume将宿主机的当前目录挂载到容器的/backup下。容器运行后将要备份的内容（/data文件夹）备份到/backup/data.tar，然后删除容器，备份后的data.tar就留在了当前目录。
+
+### 恢复volume
+
+```bash
+1. 建立目标容器
+docker run -it --name vol_bck -v /data ubuntu /bin/bash
+
+2. 解压
+docker run --rm --volumes-from vol_bck -v $(pwd):/backup ubuntu tar xvf /backup/data.tar -C /
+```
+
+首先运行了一个新容器作为数据恢复的目标。第二行指令启动了一个临时容器，这个容器挂载了两个volume，第一个volume与要恢复的volume共享，第二个将宿主机的当前目录挂载到容器的/backup下。由于之前备份的data.tar在当前目录下，那么它在容器中的/backup也能访问到，容器启动后将这个存档文件中的/data恢复到跟目录下，然后删除容器，恢复后的数据在vol_bck的volume中了。
+
+### 清除所有volume
+
+```bash
+docker volume prune
 ```
 
 ## 网络

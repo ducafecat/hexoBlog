@@ -33,9 +33,9 @@ sudo docker run --detach \
     --publish 443:443 --publish 80:80 --publish 22:22 \
     --name gitlab \
     --restart always \
-    --volume /Users/hans/Documents/labs/docker/gitlab/config:/etc/gitlab \
-    --volume /Users/hans/Documents/labs/docker/gitlab/logs:/var/log/gitlab \
-    --volume /Users/hans/Documents/labs/docker/gitlab/data:/var/opt/gitlab \
+    --volume /Users/someone/Documents/labs/docker/gitlab/config:/etc/gitlab \
+    --volume /Users/someone/Documents/labs/docker/gitlab/logs:/var/log/gitlab \
+    --volume /Users/someone/Documents/labs/docker/gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
 
 社区汉化版
@@ -44,9 +44,9 @@ sudo docker run --detach \
     --publish 443:443 --publish 80:80 --publish 22:22 \
     --name cn-gitlab \
     --restart always \
-    --volume /Users/hans/Documents/labs/docker/gitlab/config:/etc/gitlab \
-    --volume /Users/hans/Documents/labs/docker/gitlab/logs:/var/log/gitlab \
-    --volume /Users/hans/Documents/labs/docker/gitlab/data:/var/opt/gitlab \
+    --volume /Users/someone/Documents/labs/docker/gitlab/config:/etc/gitlab \
+    --volume /Users/someone/Documents/labs/docker/gitlab/logs:/var/log/gitlab \
+    --volume /Users/someone/Documents/labs/docker/gitlab/data:/var/opt/gitlab \
     twang2218/gitlab-ce-zh:latest
 ```
 
