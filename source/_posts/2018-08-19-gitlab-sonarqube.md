@@ -91,9 +91,12 @@ services:
 
 ![ducafecat_2018-08-17-16-19-35](http://oflimcy5e.bkt.clouddn.com/ducafecat_2018-08-17-16-19-35.png)
 
-下载后放到 `/usr/local/bin/sonar-scanner`
+下载后放到 `/home/sonar-scanner`
 
-记得给可执行权限 `sudo chmod +x /usr/local/bin/sonar-scanner`
+```sh
+chmod +x /home/sonar-scanner/bin/sonar-scanner
+ln -s /home/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner
+```
 
 ### 3.4 编写 sonar-project.properties 配置文件
 

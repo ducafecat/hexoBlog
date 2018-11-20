@@ -1,5 +1,5 @@
 ---
-title: Flutter 开发 - 开发环境搭建 IOS Android
+title: Flutter 开发 - 开发环境搭建 VSCode IOS Android
 top: false
 date: 2018-08-22 14:47:23
 tags: Flutter
@@ -47,7 +47,7 @@ flutter doctor
 
 - 安装 Android Studio
 
-[Android Studio, 3.0或更高版本.](https://developer.android.com/studio/index.html)
+[Android Studio, 3.0 或更高版本.](https://developer.android.com/studio/index.html)
 
 - 安装插件 `Preferences>Plugins` 搜索 `Flutter`
 
@@ -106,7 +106,7 @@ pod setup
 
 - 各种 URL 域名替换
 
-https://**storage.flutter-io.cn**/flutter_infra/releases/beta/macos/flutter_macos_v0.5.1-beta.zip
+https://storage.flutter-io.cn/flutter_infra/releases/beta/macos/flutter_macos_v0.7.3-beta.zip
 
 - 全局环境变量
 
@@ -122,7 +122,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 - [Using-Flutter-in-China](https://github.com/flutter/flutter/wiki/Using-Flutter-in-China)
 - [Flutter 中文网](https://flutterchina.club/)
 
-----
+---
 
 © 会煮咖啡的猫咪
 微信 ducafecat
