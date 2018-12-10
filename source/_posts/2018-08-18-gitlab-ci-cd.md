@@ -40,6 +40,7 @@ useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 
 ```sh
 gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+gitlab-runner install --user=root --working-directory=/root/gitlab-runner
 gitlab-runner start
 ```
 
